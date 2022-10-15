@@ -2,22 +2,13 @@
 
 .pokeCard {
   display: flex;
-  max-width: 25vw;
-  max-height: 25vh;
+  max-width: 10vw;
+  max-height: 10vh;
   margin: 20px;
   border: 1px solid grey;
   border-radius: 5px;
   overflow: hidden;
   overflow-y: auto;
-
-  &__heading {
-    margin: 20px;
-    font-size: 20px;
-  }
-
-  &__content {
-    margin: 5px;
-  }
 
   &__img {
     display: block;

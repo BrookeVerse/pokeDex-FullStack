@@ -17,7 +17,7 @@ const PokeInfo = ({ pokeArr }) => {
         <img src={pokemons.image.thumbnail} alt="" className="pokeInfo__img" />
         <div className="pokeInfo__content">
           <h2 className="pokeCard__heading" name="title">
-            {pokemons.name.english} {pokemons.id}
+            {pokemons.name.english} #{pokemons.id}
             <hr></hr>
           </h2>
           <p className="pokeCard__content" name="description">

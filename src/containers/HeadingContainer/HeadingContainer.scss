@@ -3,5 +3,8 @@
 .headingContainer {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    background-size: cover;
     background-image: url("../../assets/Images/pokeballBG.gif");
+    background-attachment: fixed;
 }
