@@ -1,0 +1,44 @@
+@use "../../assets/styles/variables" as *;
+
+.pokeInfo {
+  margin: auto 30px;
+  position: relative;
+  width: 70vw;
+  height: 90vw;
+
+  &__container {
+    display: flex;
+    margin: 60px auto;
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 50vw;
+    height: 60vw;
+    border-radius: 15px;
+  }
+
+  &__cross {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 30px;
+    top: 15px;
+  }
+
+  &__img {
+    margin: auto;
+    margin-bottom: 100px;
+    max-width: 10vh;
+    height: 20vh;
+  }
+
+  &__heading {
+    flex-direction: column;
+    margin: auto;
+    font-size: 50px;
+  }
+
+  &__content {
+    margin: auto;
+  }
+}
