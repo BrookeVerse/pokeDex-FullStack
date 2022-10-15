@@ -1,0 +1,11 @@
+@use "../../assets/styles/variables" as *;
+
+.header{
+
+    &__title{
+        font-size: 50px;
+        align-items: center;
+        margin: auto;
+        text-decoration: underline;
+    }
+}
