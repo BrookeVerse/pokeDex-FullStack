@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import "./App.scss";
 import PokeInfo from "./Pages/PokeInfo/PokeInfo";
 import Main from "./Pages/Main/Main";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
@@ -35,8 +36,17 @@ function App() {
 
   return (
     <div className="App">
-      <Main handleInput={handleInput} searchWord={searchWord} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />
-      <PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />
+      <Router>
+        <Routes>
+          <Route
+            path="/pokemon/:pokemonId"
+            element={<PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon}/>}
+          ></Route>
+          <Route path="/" element={<Main handleInput={handleInput} searchWord={searchWord} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}>
+            {" "}
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
