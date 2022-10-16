@@ -5,7 +5,7 @@ const AddTeamContainer = ({pokeArr, handleTeamName}) => {
     
   return (
     <div className="addTeamContainer">
-        <AddTeam pokeArr={pokeArr} handleTeamName={handleTeamName} />
+        <AddTeam pokeArr={pokeArr} handleTeamName={handleTeamName}/>
     </div>
   )
 }

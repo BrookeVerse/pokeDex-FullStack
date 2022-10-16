@@ -11,9 +11,11 @@ function App() {
   const [pokemon, setPokemon] = useState([]);
   const [searchWord, setSearchWord] = useState("");
   const [filterPokemon, setFilterPokemon] = useState([]);
-  const [teamName, setTeamName] = useState("")
-  const [nameInput, setNameInput] = useState("");
-  const teamArr = [];
+  const [teamName, setTeamName] = useState("");
+  const [team, setTeam] = useState([]);
+  let teamArr = [];
+
+ 
 
   const getPokemon = async () => {
     const res = await fetch("https://api.pikaserve.xyz/pokemon/all");
@@ -42,37 +44,61 @@ function App() {
   const handleTeamName = (event) => {
     const cleanInput = event.target.value.toLowerCase();
     setTeamName(cleanInput);
-  }
-
+  };
 
   const handleClick = (event) => {
     const pokemonId = event.target.value;
     const newTeamArr = pokemon.find((pokemon) => {
       return pokemon.id == pokemonId;
-    })
+    });
+    console.log(newTeamArr);
     teamArr.push(newTeamArr);
     console.log(teamArr);
   };
  
+    const pokeTeam = teamArr.slice(0, 6).map((team, index) => {
+      return <img key={index} src={team.image.sprite} alt="Pokemon" className="profileHeader__team" />;
+    });
 
 
-  const pokeTeam = pokemon.slice(0, 6).map((pokemon, index) => {
-    return <img key={index} src={pokemon.image.sprite} alt="Pokemon" className="profileHeader__team"/>;
-  });
+  
+ 
 
-  const userInfo = <div><p>"I live in the UK, living my best life with my pokemon"</p></div>
+  const userInfo = (
+    <div>
+      <p>"I live in the UK, living my best life with my pokemon"</p>
+    </div>
+  );
 
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/profile/addTeam" element={<AddTeamContainer pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleTeamName={handleTeamName} />}></Route>
+          <Route
+            path="/profile/addTeam"
+            element={<AddTeamContainer pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleTeamName={handleTeamName} />}
+          ></Route>
           <Route
             path="/pokemon/:pokemonId"
-            element={<PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleClick={handleClick}/>}
+            element={<PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleClick={handleClick} />}
           ></Route>
-          <Route path="/profile/" element={<ProfileContainer userName={"Brooke"} userImage={profileImage} userInfo={userInfo} teamName={teamName} pokeTeam={pokeTeam} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}></Route>
-          <Route path="/" element={<Main handleInput={handleInput} searchWord={searchWord} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}>
+          <Route
+            path="/profile/"
+            element={
+              <ProfileContainer
+                userName={"Brooke"}
+                userImage={profileImage}
+                userInfo={userInfo}
+                teamName={teamName}
+                pokeTeam={pokeTeam}
+                pokeArr={searchWord.length < 1 ? pokemon : filterPokemon}
+              />
+            }
+          ></Route>
+          <Route
+            path="/"
+            element={<Main handleInput={handleInput} searchWord={searchWord} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}
+          >
             {" "}
           </Route>
         </Routes>
