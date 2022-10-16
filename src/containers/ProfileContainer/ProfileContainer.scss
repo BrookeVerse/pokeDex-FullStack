@@ -1,0 +1,13 @@
+@use "../../assets/styles/variables" as *;
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  &__layout {
+    display: flex;
+  }
+  &__nav {
+    width: 15vw;
+    height: auto;
+  }
+}

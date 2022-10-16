@@ -4,14 +4,20 @@ import { Link, useParams } from "react-router-dom";
 import blackCross from "../../assets/Images/black-cross.png";
 import pokeball from "../../assets/Images/pokeballImg.png";
 
-
-
 const PokeInfo = ({ pokeArr }) => {
+  const teamArr = [];
+  const handleClick = () => {
+    const newTeamArr = pokeArr.find((pokemon) => {
+      return pokemon.id == pokemonId;
+    })
+    teamArr.push(newTeamArr);
+    console.log(teamArr);
+  };
+
   const { pokemonId } = useParams();
   const pokemons = pokeArr.find((pokemon) => {
     return pokemon.id == pokemonId;
   });
-
   const seperateSentence = pokemons.type.join(" ");
   return (
     <article className="pokeInfo">
@@ -25,23 +31,26 @@ const PokeInfo = ({ pokeArr }) => {
         <div className="pokeInfo__grid">
           <div className="pokeInfo__profile">
             <div className="pokeInfo__images">
-            <img src={pokeball} alt="pokeball" className="pokeInfo__pokeball" />
-            <img src={pokemons.image.thumbnail} alt="" className="pokeInfo__pokeImg" />
+              <img src={pokeball} alt="pokeball" className="pokeInfo__pokeball" />
+              <img src={pokemons.image.thumbnail} alt="" className="pokeInfo__pokeImg" />
             </div>
           </div>
           <div className="pokeInfo__description">
             <h2>Description</h2>
             <hr></hr>
             <p className="pokeCard__content" name="description">
-            <p>{pokemons.profile.height} {pokemons.profile.weight}</p>
+              <p>
+                {pokemons.profile.height} {pokemons.profile.weight}
+              </p>
               {pokemons.description}
             </p>
+            <button onClick={handleClick}>Add To Team</button>
           </div>
         </div>
-          <Link to={"/"}>
-            <img src={blackCross} alt="Esc Button" className="pokeInfo__cross" />
-          </Link>
-        </div>
+        <Link to={"/"}>
+          <img src={blackCross} alt="Esc Button" className="pokeInfo__cross" />
+        </Link>
+      </div>
     </article>
   );
 };

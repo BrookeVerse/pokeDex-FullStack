@@ -1,0 +1,13 @@
+@use "../../assets/styles/variables" as *;
+
+.addTeam {
+    &__name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__nameInput {
+        width: 30vw;
+    }
+}
