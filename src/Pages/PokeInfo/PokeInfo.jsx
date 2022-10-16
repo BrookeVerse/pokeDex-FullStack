@@ -2,29 +2,46 @@ import "./PokeInfo.scss";
 import { Link, useParams } from "react-router-dom";
 
 import blackCross from "../../assets/Images/black-cross.png";
+import pokeball from "../../assets/Images/pokeballImg.png";
+
+
 
 const PokeInfo = ({ pokeArr }) => {
   const { pokemonId } = useParams();
   const pokemons = pokeArr.find((pokemon) => {
     return pokemon.id == pokemonId;
   });
+
+  const seperateSentence = pokemons.type.join(" ");
   return (
     <article className="pokeInfo">
       <div className="pokeInfo__container">
-        <Link to={"/"}>
-        <img src={blackCross} alt="Esc Button" className="pokeInfo__cross" />
-        </Link>
-        <img src={pokemons.image.thumbnail} alt="" className="pokeInfo__img" />
-        <div className="pokeInfo__content">
+        <div className="pokeInfo__header">
           <h2 className="pokeCard__heading" name="title">
             {pokemons.name.english} #{pokemons.id}
-            <hr></hr>
           </h2>
-          <p className="pokeCard__content" name="description">
-            {pokemons.description}
-          </p>
+          <div className="pokeInfo__types">{seperateSentence}</div>
         </div>
-      </div>
+        <div className="pokeInfo__grid">
+          <div className="pokeInfo__profile">
+            <div className="pokeInfo__images">
+            <img src={pokeball} alt="pokeball" className="pokeInfo__pokeball" />
+            <img src={pokemons.image.thumbnail} alt="" className="pokeInfo__pokeImg" />
+            </div>
+          </div>
+          <div className="pokeInfo__description">
+            <h2>Description</h2>
+            <hr></hr>
+            <p className="pokeCard__content" name="description">
+            <p>{pokemons.profile.height} {pokemons.profile.weight}</p>
+              {pokemons.description}
+            </p>
+          </div>
+        </div>
+          <Link to={"/"}>
+            <img src={blackCross} alt="Esc Button" className="pokeInfo__cross" />
+          </Link>
+        </div>
     </article>
   );
 };

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Card.scss";
 
-const Card = ({ pokemonImage, pokemonName, pokemonInfo, pokemonId }) => {
+const Card = ({ pokemonImage, pokemonName, pokemonId }) => {
   return (
     <div className="pokeCard" name="card">
       <Link to={`/pokemon/${pokemonId}`}>
