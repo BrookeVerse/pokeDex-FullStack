@@ -1,0 +1,33 @@
+@use "../../assets/styles/variables" as *;
+
+.profile {
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    margin: 100px auto;
+    align-items: center;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+
+    &__heading {
+        font-size: 30px;
+    }
+    &__pencil {
+        position: relative;
+        left: 700px;
+    }
+    &__image {
+        margin: 20px;
+        width: 17vw;
+        height: 35vh;
+        border-radius: 100px;
+    }
+
+    &__content {
+        margin: auto;
+    }
+
+    &__team {
+        margin: 20px;
+    }
+}

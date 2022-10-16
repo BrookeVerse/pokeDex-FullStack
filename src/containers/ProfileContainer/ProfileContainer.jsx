@@ -5,7 +5,7 @@ import "./ProfileContainer.scss";
 const ProfileContainer = ({userName, userImage, userInfo, teamName, pokeTeam}) => {
   return (
     <div className="profileContainer">
-        <Profile userName={userName} userImage={userImage} userInfo={userInfo} teamName={teamName} pokeTeam={pokeTeam}/>
+        <Profile userName={userName} userImage={userImage} userInfo={userInfo} teamName={teamName} pokeTeam={pokeTeam} />
     </div>
   )
 }

@@ -11,7 +11,7 @@ const NavBarContainer = ({ selected, getCurrentPage }) => {
         <ul className="navBar__linkList">
           <li className="navBar__link">
             <AiOutlineUsergroupDelete />
-            <NavBarItem text="Profile" selected={selected} getCurrentPage={getCurrentPage} link="/" />
+            <NavBarItem text="Profile" selected={selected} getCurrentPage={getCurrentPage} link="/profile/" />
           </li>
           <li className="navBar__link">
             <TbPokeball />
