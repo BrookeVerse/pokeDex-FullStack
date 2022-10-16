@@ -4,15 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import blackCross from "../../assets/Images/black-cross.png";
 import pokeball from "../../assets/Images/pokeballImg.png";
 
-const PokeInfo = ({ pokeArr }) => {
-  const teamArr = [];
-  const handleClick = () => {
-    const newTeamArr = pokeArr.find((pokemon) => {
-      return pokemon.id == pokemonId;
-    })
-    teamArr.push(newTeamArr);
-    console.log(teamArr);
-  };
+const PokeInfo = ({ pokeArr, handleClick }) => {
+
 
   const { pokemonId } = useParams();
   const pokemons = pokeArr.find((pokemon) => {
@@ -44,7 +37,7 @@ const PokeInfo = ({ pokeArr }) => {
               </p>
               {pokemons.description}
             </p>
-            <button onClick={handleClick}>Add To Team</button>
+            <button onClick={handleClick} value={pokemons.id}>Add To Team</button>
           </div>
         </div>
         <Link to={"/"}>

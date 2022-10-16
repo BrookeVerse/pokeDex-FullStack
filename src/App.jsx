@@ -44,7 +44,15 @@ function App() {
     setTeamName(cleanInput);
   }
 
- 
+
+  const handleClick = (event) => {
+    const pokemonId = event.target.value;
+    const newTeamArr = pokemon.find((pokemon) => {
+      return pokemon.id == pokemonId;
+    })
+    teamArr.push(newTeamArr);
+    console.log(teamArr);
+  };
  
 
 
@@ -61,7 +69,7 @@ function App() {
           <Route path="/profile/addTeam" element={<AddTeamContainer pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleTeamName={handleTeamName} />}></Route>
           <Route
             path="/pokemon/:pokemonId"
-            element={<PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}
+            element={<PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleClick={handleClick}/>}
           ></Route>
           <Route path="/profile/" element={<ProfileContainer userName={"Brooke"} userImage={profileImage} userInfo={userInfo} teamName={teamName} pokeTeam={pokeTeam} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}></Route>
           <Route path="/" element={<Main handleInput={handleInput} searchWord={searchWord} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}>
