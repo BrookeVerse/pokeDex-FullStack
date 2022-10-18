@@ -7,12 +7,13 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ProfileContainer from "./containers/ProfileContainer/ProfileContainer";
 import profileImage from "./assets/Images/me.jpg";
 import AddTeamContainer from "./containers/AddTeamContainer/AddTeamContainer";
+import loadingScreen from "./assets/Images/pokeballBG2.gif";
 function App() {
   const [pokemon, setPokemon] = useState([]);
   const [searchWord, setSearchWord] = useState("");
   const [filterPokemon, setFilterPokemon] = useState([]);
   const [teamName, setTeamName] = useState("");
-  const [team, setTeam] = useState([]);
+  const [className, setClassName] = useState("App-logo")
   let teamArr = [];
 
   const getPokemon = async () => {
@@ -20,6 +21,13 @@ function App() {
     const data = await res.json();
     setPokemon(data);
   };
+
+   const classNameChange = () => {
+    setClassName("App-logoOpacity")
+   }
+    
+   setTimeout(() => {classNameChange();}, 5000)
+ 
 
   useEffect(() => {
     getPokemon();
@@ -66,6 +74,7 @@ function App() {
 
   return (
     <div className="App">
+      <img src={loadingScreen} alt="wait until loaded" className={className}/>
       <Router>
         <Routes>
           <Route
