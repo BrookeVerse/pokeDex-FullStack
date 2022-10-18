@@ -19,7 +19,7 @@ const NavBarContainer = ({ selected, getCurrentPage }) => {
           </li>
           <li className="navBar__link">
             <RiTeamFill />
-            <NavBarItem text="Team" selected={selected} getCurrentPage={getCurrentPage} link="/" />
+            <NavBarItem text="Team" selected={selected} getCurrentPage={getCurrentPage} link="/addTeam/" />
           </li>
         </ul>
       </div>

@@ -15,8 +15,6 @@ function App() {
   const [team, setTeam] = useState([]);
   let teamArr = [];
 
- 
-
   const getPokemon = async () => {
     const res = await fetch("https://api.pikaserve.xyz/pokemon/all");
     const data = await res.json();
@@ -55,14 +53,10 @@ function App() {
     teamArr.push(newTeamArr);
     console.log(teamArr);
   };
- 
-    const pokeTeam = teamArr.slice(0, 6).map((team, index) => {
-      return <img key={index} src={team.image.sprite} alt="Pokemon" className="profileHeader__team" />;
-    });
 
-
-  
- 
+  const pokeTeam = pokemon.slice(0, 6).map((team, index) => {
+    return <img key={index} src={team.image.sprite} alt="Pokemon" className="profileHeader__team" />;
+  });
 
   const userInfo = (
     <div>
@@ -75,7 +69,7 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/profile/addTeam"
+            path="/addTeam/"
             element={<AddTeamContainer pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleTeamName={handleTeamName} />}
           ></Route>
           <Route

@@ -17,7 +17,7 @@ const Profile = ({ userName, userImage, userInfo, teamName, pokeTeam }) => {
             {teamName}
           </label>
           <div>{pokeTeam}</div>
-          <Link to={"/profile/addTeam"}>
+          <Link to={"/addTeam"}>
           <button>Add Team</button>
           </Link>
         </div>

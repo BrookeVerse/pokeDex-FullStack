@@ -1,13 +1,29 @@
 @use "../../assets/styles/variables" as *;
 
 .addTeam {
+    margin: auto;
     &__name {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    &__nameLabel {
+        font-size: larger;
+    }
+
+    &__pokeTeam {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__pokeLabel {
+        margin: 10px;
+        font-size: larger;
+    }
 
     &__nameInput {
         width: 30vw;
     }
+
 }
