@@ -6,7 +6,7 @@ import pokeLogo from "../../assets/Images/pokeLogo.png";
 
 const HeadingContainer = ({ pokeArr }) => {
   const pokeTeam = pokeArr.slice(0, 6).map((pokemon, index) => {
-    return <img key={index} src={pokemon.image.sprite} alt="Pokemon" className="profileHeader__team"/>;
+    return <img key={index} src={pokemon.sprite} alt="Pokemon" className="profileHeader__team"/>;
   });
   return (
     <div className="headingContainer">

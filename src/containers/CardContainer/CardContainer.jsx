@@ -3,7 +3,7 @@ import Card from "../../components/Card/Card";
 
 const CardContainer = ({pokeArr}) => {
   const pokeCards = pokeArr.map((pokemon, index) => {
-    return <Card key={index} pokemonImage={pokemon.image.thumbnail} pokemonId={pokemon.id}/>;
+    return <Card key={index} pokemonImage={pokemon.hires} pokemonId={pokemon.id}/>;
   });
 
   if (pokeCards.length === 0) {

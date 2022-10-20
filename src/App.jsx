@@ -1,13 +1,15 @@
+import "./App.scss";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
-import "./App.scss";
+
 import PokeInfo from "./Pages/PokeInfo/PokeInfo";
-import Main from "./Pages/Main/Main";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ProfileContainer from "./containers/ProfileContainer/ProfileContainer";
+import Main from "./Pages/Main/Main";
 import profileImage from "./assets/Images/me.jpg";
 import AddTeamContainer from "./containers/AddTeamContainer/AddTeamContainer";
 import loadingScreen from "./assets/Images/pokeballBG2.gif";
+
 function App() {
   const [pokemon, setPokemon] = useState([]);
   const [searchWord, setSearchWord] = useState("");
@@ -17,7 +19,7 @@ function App() {
   let teamArr = [];
 
   const getPokemon = async () => {
-    const res = await fetch("https://api.pikaserve.xyz/pokemon/all");
+    const res = await fetch("http://localhost:8080/pokemon/");
     const data = await res.json();
     setPokemon(data);
   };
@@ -39,7 +41,7 @@ function App() {
 
     if (searchWord !== "") {
       const newPokeArr = pokemon.filter((pokemon) => {
-        return pokemon.name.english.toLowerCase().includes(searchWord);
+        return pokemon.name.toLowerCase().includes(searchWord);
       });
       setFilterPokemon(newPokeArr);
     } else {
@@ -63,7 +65,7 @@ function App() {
   };
 
   const pokeTeam = pokemon.slice(0, 6).map((team, index) => {
-    return <img key={index} src={team.image.sprite} alt="Pokemon" className="profileHeader__team" />;
+    return <img key={index} src={team.sprite} alt="Pokemon" className="profileHeader__team" />;
   });
 
   const userInfo = (
