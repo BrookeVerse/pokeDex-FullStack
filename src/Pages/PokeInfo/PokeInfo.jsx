@@ -3,14 +3,26 @@ import { Link, useParams } from "react-router-dom";
 
 import blackCross from "../../assets/Images/black-cross.png";
 import pokeball from "../../assets/Images/pokeballImg.png";
-
+import { useState } from "react";
 const PokeInfo = ({ pokeArr, handleClick }) => {
-
-
+  const [pokemon, setPokemon] = useState();
   const { pokemonId } = useParams();
   const pokemons = pokeArr.find((pokemon) => {
     return pokemon.id == pokemonId;
   });
+
+  const updatePokemon = async chosenPokemon => {
+    const response = await fetch(`http://localhost:8080/pokemon/${pokemonId}`, {
+    method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(chosenPokemon.innerHTML),
+    })
+    setPokemon(chosenPokemon);
+    console.log(chosenPokemon);
+  }
 
   return (
     <article className="pokeInfo">
@@ -37,7 +49,7 @@ const PokeInfo = ({ pokeArr, handleClick }) => {
               </p>
               {pokemons.description}
             </p>
-            <button onClick={handleClick} value={pokemons.id}>Add To Team</button>
+            <button onClick={updatePokemon} value={pokemons.id}>Add To Team</button>
           </div>
         </div>
         <Link to={"/"}>

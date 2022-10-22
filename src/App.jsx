@@ -15,8 +15,7 @@ function App() {
   const [searchWord, setSearchWord] = useState("");
   const [filterPokemon, setFilterPokemon] = useState([]);
   const [teamName, setTeamName] = useState("");
-  const [className, setClassName] = useState("App-logo")
-  let teamArr = [];
+  const [className, setClassName] = useState("App-logo");
 
   const getPokemon = async () => {
     const res = await fetch("http://localhost:8080/pokemon/");
@@ -24,12 +23,13 @@ function App() {
     setPokemon(data);
   };
 
-   const classNameChange = () => {
-    setClassName("App-logoOpacity")
-   }
-    
-   setTimeout(() => {classNameChange();}, 5000)
- 
+  const classNameChange = () => {
+    setClassName("App-logoOpacity");
+  };
+
+  setTimeout(() => {
+    classNameChange();
+  }, 5000);
 
   useEffect(() => {
     getPokemon();
@@ -54,19 +54,7 @@ function App() {
     setTeamName(cleanInput);
   };
 
-  const handleClick = (event) => {
-    const pokemonId = event.target.value;
-    const newTeamArr = pokemon.find((pokemon) => {
-      return pokemon.id == pokemonId;
-    });
-    console.log(newTeamArr);
-    teamArr.push(newTeamArr);
-    console.log(teamArr);
-  };
-
-  const pokeTeam = pokemon.slice(0, 6).map((team, index) => {
-    return <img key={index} src={team.sprite} alt="Pokemon" className="profileHeader__team" />;
-  });
+ 
 
   const userInfo = (
     <div>
@@ -76,7 +64,7 @@ function App() {
 
   return (
     <div className="App">
-      <img src={loadingScreen} alt="wait until loaded" className={className}/>
+      <img src={loadingScreen} alt="wait until loaded" className={className} />
       <Router>
         <Routes>
           <Route
@@ -85,7 +73,7 @@ function App() {
           ></Route>
           <Route
             path="/pokemon/:pokemonId"
-            element={<PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} handleClick={handleClick} />}
+            element={<PokeInfo pokeArr={searchWord.length < 1 ? pokemon : filterPokemon}  />}
           ></Route>
           <Route
             path="/profile/"
@@ -95,7 +83,6 @@ function App() {
                 userImage={profileImage}
                 userInfo={userInfo}
                 teamName={teamName}
-                pokeTeam={pokeTeam}
                 pokeArr={searchWord.length < 1 ? pokemon : filterPokemon}
               />
             }

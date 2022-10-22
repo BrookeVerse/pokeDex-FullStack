@@ -1,8 +1,8 @@
 import "./Profile.scss";
 import { ImPencil } from "react-icons/im";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const Profile = ({ userName, userImage, userInfo, teamName, pokeTeam }) => {
+const Profile = ({ handleTeam,userName, userImage, userInfo, teamName, pokeTeam }) => {
   return (
     <div className="profile">
       <div>
@@ -17,9 +17,9 @@ const Profile = ({ userName, userImage, userInfo, teamName, pokeTeam }) => {
             {teamName}
           </label>
           <div>{pokeTeam}</div>
-          <Link to={"/addTeam"}>
-          <button>Add Team</button>
-          </Link>
+          {/* <Link to={"/addTeam"}> */}
+          <button onClick={handleTeam}>Add Team</button>
+          {/* </Link> */}
         </div>
       </div>
     </div>
