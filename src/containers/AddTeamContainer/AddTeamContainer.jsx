@@ -3,7 +3,25 @@ import HeadingContainer from "../HeadingContainer/HeadingContainer";
 import NavBarContainer from "../NavBarContainer/NavBarContainer";
 import "./AddTeamContainer.scss";
 
-const AddTeamContainer = ({ pokeArr, handleTeamName }) => {
+const AddTeamContainer = ({ pokeArr }) => {
+  const handleSubmit = async user => {
+    const result = await fetch("http://localhost:8080/team", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+
+    if (result.ok) {
+      alert("User added");
+    } else {
+      const message = await result.text();
+      alert(message);
+    }
+  };
+
+  const defaultFormState = { first_name: "", user_Info: "", password: ""};
   return (
     <div className="addTeamContainer">
       <HeadingContainer pokeArr={pokeArr} />
@@ -11,7 +29,7 @@ const AddTeamContainer = ({ pokeArr, handleTeamName }) => {
         <div className="addTeamContainer__nav">
           <NavBarContainer />
         </div>
-        <AddTeam pokeArr={pokeArr} handleTeamName={handleTeamName} />
+        <AddTeam handleSubmit={handleSubmit} defaultFormState={defaultFormState} />
       </div>
     </div>
   );

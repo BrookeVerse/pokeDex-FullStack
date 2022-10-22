@@ -24,6 +24,19 @@ const PokeInfo = ({ pokeArr, handleClick }) => {
     console.log(chosenPokemon);
   }
 
+  const removePokemon = async chosenPokemon => {
+    const response = await fetch(`http://localhost:8080/pokemon/remove/${pokemonId}`, {
+    method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(chosenPokemon.innerHTML),
+    })
+    setPokemon(chosenPokemon);
+    console.log(chosenPokemon);
+  }
+
   return (
     <article className="pokeInfo">
       <div className="pokeInfo__container">
@@ -50,6 +63,7 @@ const PokeInfo = ({ pokeArr, handleClick }) => {
               {pokemons.description}
             </p>
             <button onClick={updatePokemon} value={pokemons.id}>Add To Team</button>
+            <button onClick={removePokemon} value={pokemons.id}>Remove From Team</button>
           </div>
         </div>
         <Link to={"/"}>

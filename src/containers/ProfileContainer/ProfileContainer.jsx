@@ -6,16 +6,27 @@ import "./ProfileContainer.scss";
 
 const ProfileContainer = ({ handleTeam,userName, userImage, userInfo, teamName }) => {
   const [pokemon, setPokemon] = useState([]);
+  const [user, setUser] = useState([]);
+
   const getPokemon = async () => {
     const res = await fetch("http://localhost:8080/pokemon/");
     const data = await res.json();
     setPokemon(data);
   };
+
+  const getUser = async (id) => {
+    const response = await fetch(`http://localhost:8080/team/${id}`);
+    const userData = await response.json();
+    setUser(userData)  
+
+  }
   
   useEffect(() => {
     getPokemon();
+    getUser(1);
   }, []);
-
+  
+console.log(user);
   const pokeTrainer = pokemon.filter(pokemon => pokemon.team);
   
 
