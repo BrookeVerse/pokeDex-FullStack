@@ -1,14 +1,21 @@
 @use "../../assets/styles/variables" as *;
 
 .homeContainer {
+  background-size: cover;
+  background-attachment: fixed;
+  background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.8), 
+          rgba(0, 0, 0, 0.8)
+        ),
+        url(../../assets/Images/eeveeBG.png);
+  width: 100vw;
+  height: 100vh;
     display: flex;
     flex-direction: column;
+ 
     &__layout {
       display: flex;
-    }
-    &__nav {
-      width: 15vw;
-      height: auto;
     }
 
     &__content{

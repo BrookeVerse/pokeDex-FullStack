@@ -4,9 +4,11 @@
 
 .App-logo {
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
   left: 0px;
+  z-index: 99999;
 }
 
 .App-logoOpacity{

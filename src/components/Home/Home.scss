@@ -7,17 +7,25 @@
     }
 
     &__heading {
+        color: white;
         margin: auto 0;
     }
     &__logo{
         width: 15vw;
     }
-    
-    &__pokePic{
-        width: 10vw;
+    &__content {
+        display: flex;
     }
-    &__card{
-        border: 1px solid black;
-        max-width: 30vw;
+    &__text{
+        margin: auto;
+        width: 30vw;
     }
+    &__intro{
+        color: white;
+    }
+    &__howTo{
+        color: white;
+    }
+   
 }
+
