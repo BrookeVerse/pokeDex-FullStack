@@ -1,19 +1,57 @@
 @use "../../assets/styles/variables" as *;
 
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
 .pokeCard {
   display: flex;
-  max-width: 10vw;
-  max-height: 10vh;
+  max-height: 20vh;
+  max-width: 20vw;
   margin: 20px;
   border: 1px solid grey;
-  border-radius: 5px;
-  overflow: hidden;
-  overflow-y: auto;
+  box-shadow: 0 5px 10px rgba(#000, 0.8);
+  border-radius: 6px;
+  background-color: #fff;
+  align-items: center;
+  text-align: center;
 
-  &__img {
+  img {
     display: block;
-    max-width: 7vw;
-    height: 7vh;
+    max-width: 8vw;
+    height: 8vh;
     margin: 10px;
+  }
+}
+.shine {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: -75%;
+    position: absolute;
+    top: 0;
+    transform: skewX(-25deg);
+    width: 50%;
+    z-index: 2;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      animation: shine 1.7s;
+    }
+  }
+
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
   }
 }
