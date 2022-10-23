@@ -9,9 +9,11 @@ const RandomCard = ({ pokemon }) => {
             <img src={pokemon.hires} alt="" className="randomCard__pokePic" />
           </div>
           <div className="randomCard__contentBox">
-            <h3>{pokemon.name}</h3>
-            <p>{pokemon.type}</p>
-            <p>{pokemon.description}</p>
+            <h2>{pokemon.name}</h2>
+            <div className="randomCard__info">
+              <h3>{pokemon.type}</h3>
+              <p>{pokemon.description}</p>
+            </div>
           </div>
           <div className="randomCard__color">
             <span></span>

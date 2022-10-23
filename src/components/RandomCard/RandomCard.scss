@@ -1,9 +1,6 @@
 @use "../../assets/styles/variables" as *;
 
 .randomCard {
-    &__pokePic{
-        width: 10vw;
-    }
     &__container{
         position: relative;
     }
@@ -59,7 +56,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(-25deg);
-        width: 270px;
+        width: 230px;
       }
       
       &__container &__card &__contentBox{
@@ -84,7 +81,7 @@
         margin: 0;
       }
       
-      &__container &__card &__contentBox .size, &__container &__card &__contentBox &__color {
+      &__container &__card &__contentBox &__info  &__container &__card &__contentBox &__color {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,7 +92,7 @@
         padding-bottom: 0;
       }
       
-      &__container &__card:hover &__contentBox .size{
+      &__container &__card:hover &__contentBox &__info{
         opacity: 1;
         visibility: visible;
         transition-delay: 0.5s;
@@ -107,7 +104,7 @@
         transition-delay: 0.6s;
       }
       
-      &__container &__card &__contentBox  &__container &__card &__contentBox &__color h3{
+      &__container &__card &__contentBox &__info h3, &__container &__card &__contentBox &__color h3{
         color: #fff;
         font-weight: 300;
         font-size: 14px;
@@ -116,60 +113,17 @@
         margin-right: 10px;
       }
       
-      &__container &__card &__contentBox  span{
-        width: 26px;
-        height: 26px;
+      &__container &__card &__contentBox &__info  p{
+        margin: 20px auto;
         text-align: center;
-        line-height: 26px;
-        font-size: 14px;
+        font-size: 16px;
         display: inline-block;
-        color: #111;
-        background: #fff;
-        margin: 0 5px;
+        color: #fff;
         transition: 0.5s;
-        color: #111;
-        border-radius: 4px;
-        cursor: pointer;
       }
       
-      &__container &__card &__contentBox .size span:hover{
+      &__container &__card &__contentBox &__info span:hover{
         background: #FF6961;
-      }
-      
-      &__container &__card &__contentBox &__color span{
-        width: 20px;
-        height: 20px;
-        background: #FF6961;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-      }
-      
-      &__container &__card &__contentBox &__color span:nth-child(2){
-        background: #FF6961;
-      }
-      
-      &__container &__card &__contentBox &__color span:nth-child(3){
-        background: #03a9f4;
-      }
-      
-      &__container &__card &__contentBox &__color span:nth-child(4){
-        background: #e91e63;
-      }
-      
-      &__container &__card &__contentBox a{
-        display: inline-block;
-        padding: 10px 20px;
-        background: #fff;
-        border-radius: 4px;
-        margin-top: 10px;
-        text-decoration: none;
-        font-weight: 600;
-        color: #111;
-        opacity: 0;
-        transform: translateY(50px);
-        transition: 0.5s;
-        margin-top: 0;
       }
       
       &__container &__card:hover &__contentBox a{
