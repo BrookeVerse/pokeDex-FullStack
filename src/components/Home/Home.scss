@@ -9,6 +9,10 @@
     &__heading {
         color: white;
         margin: auto 0;
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-shadow: 2px 4px 6px  #fff;
     }
     &__logo{
         width: 15vw;
@@ -17,15 +21,48 @@
         display: flex;
     }
     &__text{
-        margin: auto;
-        width: 30vw;
+        background: #232323;
+        border-radius: 20px;
+        padding: 20px;
+        margin: auto 100px;
+        width: 25vw;
     }
     &__intro{
         color: white;
     }
-    &__howTo{
+    &__list{
+        list-style: none;
+        margin-top: 20px;
         color: white;
     }
+    &__buttonText{
+        margin-top: 10px;
+        color: #fff;
+      }
+
+    &__button {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    &__button:hover {
+        transform:translateX(10px);
+    }
+
+    @media screen and (max-width: 390px) {
+        .home{
+            &__heading {
+                font-size: 30px;
+            }
+          &__text{
+            margin: 80px 60px;
+            padding: 20px;
+            width: 80vw;
+            height: 50vh;
+          }
+        }
+      }
    
 }
 

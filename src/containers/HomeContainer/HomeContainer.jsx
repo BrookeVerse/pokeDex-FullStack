@@ -1,11 +1,9 @@
 import Home from "../../components/Home/Home";
-import HeadingContainer from "../HeadingContainer/HeadingContainer";
-import NavBarContainer from "../NavBarContainer/NavBarContainer";
 import { useEffect, useState } from "react";
 
 import "./HomeContainer.scss";
 
-const HomeContainer = ({ pokeArr }) => {
+const HomeContainer = () => {
   const [random, setRandom] = useState([]);
   const getRandomPokemon = async () => {
     const res = await fetch("http://localhost:8080/pokemon/random");
@@ -16,7 +14,7 @@ const HomeContainer = ({ pokeArr }) => {
   useEffect(() => {
     getRandomPokemon();
   }, []);
-  const pokeTrainer = pokeArr.filter((pokemon) => pokemon.team == "trainer");
+
   return (
     <div className="homeContainer">
       <div className="homeContainer__layout">
@@ -24,6 +22,9 @@ const HomeContainer = ({ pokeArr }) => {
           <Home pokemon={random} />
         </div>
       </div>
+      <footer className="homeContainer__footer">
+        <p>Developer By Brooke Waldorf-Wells</p>
+      </footer>
     </div>
   );
 };

@@ -3,22 +3,23 @@
 .homeContainer {
   background-size: cover;
   background-attachment: fixed;
-  background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.8), 
-          rgba(0, 0, 0, 0.8)
-        ),
-        url(../../assets/Images/eeveeBG.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../assets/Images/eeveeBG.png);
   width: 100vw;
   height: 100vh;
-    display: flex;
-    flex-direction: column;
- 
-    &__layout {
-      display: flex;
-    }
+  display: flex;
+  flex-direction: column;
 
-    &__content{
-      margin: auto;
-    }
+  &__layout {
+    display: flex;
   }
+  &__content {
+    margin: auto;
+  }
+  &__footer {
+    position: relative;
+    color: #fff;
+    bottom: -150px;
+  }
+ 
+}
+
