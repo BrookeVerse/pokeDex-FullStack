@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const AddTeam = ({ handleSubmit, defaultFormState}) => {
- const [user, setUser] = useState(defaultFormState);
+ const [trainer, setTrainer] = useState(defaultFormState);
 
   const handleValidation = event => {
     event.preventDefault();
 
-    if (Object.values(user).some(value => !value)) {
+    if (Object.values(trainer).some(value => !value)) {
       alert("Missing content, unable to proceed");
       return;
     }
 
-    handleSubmit(user);
+    handleSubmit(trainer);
   };
   return (
     <div className="addTeam">
@@ -31,15 +31,15 @@ const AddTeam = ({ handleSubmit, defaultFormState}) => {
           <label htmlFor="Team" className="addTeam__pokeLabel">
             Enter Your NAME
           </label>
-          <input type="text" placeholder="Whats your name?" name="pokemon_id" className="addTeam__pokeIdInput" value={user.first_name} onInput={event => setUser({...user, first_name: event.target.value})}/>
+          <input type="text" placeholder="Whats your name?" name="pokemon_id" className="addTeam__pokeIdInput" value={trainer.trainer_name} onInput={event => setTrainer({...trainer, trainer_name: event.target.value})}/>
           <label htmlFor="Name" className="addTeam__nameLabel">
             Describe yourself?
           </label>
-          <input type="text" placeholder="Tell us about yourself" name="Name" className="addTeam__nameInput" value={user.user_Info} onInput={event => setUser({...user, user_Info: event.target.value})}/>
+          <input type="text" placeholder="Tell us about yourself" name="Name" className="addTeam__nameInput" value={trainer.game_info} onInput={event => setTrainer({...trainer, game_info: event.target.value})}/>
           <label htmlFor="Name" className="addTeam__nameLabel">
             Password! shhhh
           </label>
-          <input type="text" placeholder="password here..." name="Name" className="addTeam__nameInput" value={user.password} onInput={event => setUser({...user, password: event.target.value})}/>
+          <input type="text" placeholder="password here..." name="Name" className="addTeam__nameInput" value={trainer.description} onInput={event => setTrainer({...trainer, description: event.target.value})}/>
         </div>
         <button>Submit</button>
       </form>

@@ -1,10 +1,9 @@
 import "./PokeInfo.scss";
 import { Link, useParams } from "react-router-dom";
-
 import blackCross from "../../assets/Images/black-cross.png";
 import pokeball from "../../assets/Images/pokeballImg.png";
 import { useState } from "react";
-const PokeInfo = ({ pokeArr, handleClick }) => {
+const PokeInfo = ({ pokeArr }) => {
   const [pokemon, setPokemon] = useState();
   const { pokemonId } = useParams();
   const pokemons = pokeArr.find((pokemon) => {
@@ -21,7 +20,6 @@ const PokeInfo = ({ pokeArr, handleClick }) => {
       body: JSON.stringify(chosenPokemon.innerHTML),
     })
     setPokemon(chosenPokemon);
-    console.log(chosenPokemon);
   }
 
   const removePokemon = async chosenPokemon => {

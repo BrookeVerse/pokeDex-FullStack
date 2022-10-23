@@ -4,13 +4,13 @@ import NavBarContainer from "../NavBarContainer/NavBarContainer";
 import "./AddTeamContainer.scss";
 
 const AddTeamContainer = ({ pokeArr }) => {
-  const handleSubmit = async user => {
+  const handleSubmit = async trainer => {
     const result = await fetch("http://localhost:8080/team", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(trainer),
     });
 
     if (result.ok) {
@@ -21,7 +21,7 @@ const AddTeamContainer = ({ pokeArr }) => {
     }
   };
 
-  const defaultFormState = { first_name: "", user_Info: "", password: ""};
+  const defaultFormState = { trainer_name: "", game_info: "", description: ""};
   return (
     <div className="addTeamContainer">
       <HeadingContainer pokeArr={pokeArr} />
