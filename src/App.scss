@@ -1,5 +1,15 @@
 .App {
+  width: 100vw;
+  height: 100vh;
   text-align: center;
+  background-color: #505050;
+}
+
+.Applight{
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: #fff;
 }
 
 .App-logo {
@@ -17,4 +27,23 @@
   left: 0px;
   height: 0;
   width: 0;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }

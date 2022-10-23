@@ -11,8 +11,10 @@
 }
 .profileHeader {
   display: flex;
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: 7px 7px 10px rgba(#000, 0.8);
   margin: 10px;
   padding: 10px;
   &__img {
