@@ -5,9 +5,10 @@ import MainContainer from "../../containers/MainContainer/MainContainer";
 import NavBarContainer from "../../containers/NavBarContainer/NavBarContainer";
 
 const PokeDex = ({ pokeArr, searchWord, handleInput }) => {
+  const pokeTrainer = pokeArr.filter((pokemon) => pokemon.team == "trainer");
   return (
     <div>
-      <HeadingContainer pokeArr={pokeArr} />
+      <HeadingContainer pokeArr={pokeTrainer} />
       <div className="layout">
         <div className="Nav">
           <NavBarContainer />

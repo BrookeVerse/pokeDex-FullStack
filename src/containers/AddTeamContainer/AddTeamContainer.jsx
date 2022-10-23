@@ -12,7 +12,6 @@ const AddTeamContainer = ({ pokeArr }) => {
       },
       body: JSON.stringify(trainer),
     });
-
     if (result.ok) {
       alert("User added");
     } else {
@@ -21,10 +20,12 @@ const AddTeamContainer = ({ pokeArr }) => {
     }
   };
 
+  const pokeTrainer = pokeArr.filter((pokemon) => pokemon.team == "trainer");
+
   const defaultFormState = { trainer_name: "", game_info: "", description: ""};
   return (
     <div className="addTeamContainer">
-      <HeadingContainer pokeArr={pokeArr} />
+      <HeadingContainer pokeArr={pokeTrainer} />
       <div className="addTeamContainer__layout">
         <div className="addTeamContainer__nav">
           <NavBarContainer />

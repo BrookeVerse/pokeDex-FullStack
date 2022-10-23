@@ -3,9 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import blackCross from "../../assets/Images/black-cross.png";
 import pokeball from "../../assets/Images/pokeballImg.png";
 import { useState } from "react";
+import { useNavigate} from "react-router-dom";
 const PokeInfo = ({ pokeArr }) => {
   const [pokemon, setPokemon] = useState();
   const { pokemonId } = useParams();
+  const navigate = useNavigate();
   const pokemons = pokeArr.find((pokemon) => {
     return pokemon.id == pokemonId;
   });
@@ -20,6 +22,9 @@ const PokeInfo = ({ pokeArr }) => {
       body: JSON.stringify(chosenPokemon.innerHTML),
     })
     setPokemon(chosenPokemon);
+    navigate("/")
+    window.location.reload(true)
+  
   }
 
   const removePokemon = async chosenPokemon => {
@@ -32,7 +37,8 @@ const PokeInfo = ({ pokeArr }) => {
       body: JSON.stringify(chosenPokemon.innerHTML),
     })
     setPokemon(chosenPokemon);
-    console.log(chosenPokemon);
+    navigate("/")
+    window.location.reload(true)
   }
 
   return (

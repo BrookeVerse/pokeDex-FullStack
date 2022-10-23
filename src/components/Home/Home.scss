@@ -1,0 +1,23 @@
+@use "../../assets/styles/variables" as *;
+
+.home {
+    &__header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__heading {
+        margin: auto 0;
+    }
+    &__logo{
+        width: 15vw;
+    }
+    
+    &__pokePic{
+        width: 10vw;
+    }
+    &__card{
+        border: 1px solid black;
+        max-width: 30vw;
+    }
+}

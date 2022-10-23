@@ -9,6 +9,7 @@ import Main from "./Pages/Main/Main";
 import profileImage from "./assets/Images/me.jpg";
 import AddTeamContainer from "./containers/AddTeamContainer/AddTeamContainer";
 import loadingScreen from "./assets/Images/pokeballBG2.gif";
+import HomeContainer from "./containers/HomeContainer/HomeContainer";
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
@@ -88,11 +89,12 @@ function App() {
             }
           ></Route>
           <Route
-            path="/"
+            path="/pokedex/"
             element={<Main handleInput={handleInput} searchWord={searchWord} pokeArr={searchWord.length < 1 ? pokemon : filterPokemon} />}
           >
             {" "}
           </Route>
+          <Route path="/" element={<HomeContainer pokeArr={searchWord.length < 1 ? pokemon : filterPokemon}/>}>{" "}</Route>
         </Routes>
       </Router>
     </div>

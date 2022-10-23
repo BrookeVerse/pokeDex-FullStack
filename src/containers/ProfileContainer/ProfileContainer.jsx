@@ -13,9 +13,6 @@ const ProfileContainer = ({ handleTeam, userName, userImage, userInfo, teamName 
   const [trainerInfo, setTrainerInfo] = useState([]);
   const navigate = useNavigate();
 
-  console.log(trainerInfo);
-  console.log(trainerId);
-
   const getPokemon = async () => {
     const res = await fetch("http://localhost:8080/pokemon/");
     const data = await res.json();
@@ -64,7 +61,7 @@ const ProfileContainer = ({ handleTeam, userName, userImage, userInfo, teamName 
 
   const handleSelectedTrainer = event => setTrainerId(event.target.value)
 
-  const pokeTrainer = pokemon.filter((pokemon) => pokemon.team);
+  const pokeTrainer = pokemon.filter((pokemon) => pokemon.team == "trainer");
 
   const pokeTeam = pokeTrainer.slice(0, 6).map((team, index) => {
     return <img key={index} src={team.sprite} alt="Pokemon" className="profileHeader__team" />;

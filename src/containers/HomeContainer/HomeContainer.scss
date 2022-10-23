@@ -1,0 +1,17 @@
+@use "../../assets/styles/variables" as *;
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    &__layout {
+      display: flex;
+    }
+    &__nav {
+      width: 15vw;
+      height: auto;
+    }
+
+    &__content{
+      margin: auto;
+    }
+  }
