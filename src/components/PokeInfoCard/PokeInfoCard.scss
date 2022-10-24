@@ -1,63 +1,49 @@
 @use "../../assets/styles/variables" as *;
 
 .pokeInfoCard {
-  margin: auto;
-  position: relative;
-  width: 90vw;
-  height: 30vw;
-  background-color: darkgray;
-
+  &__container {
+    display: inline-block;
+    margin: 20px 10px;
+    max-width: 400px;
+    padding: 1em;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6), 3px 3px 3px 0 rgba(#f759e4, 0.6), 0 0 6px 2px rgba(#ffe759, 0.6),
+      0 35px 25px -15px rgba(0, 0, 0, 0.5);
+    background-color: darkgray;
+    background-blend-mode: color-dodge;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+  }
   &__header {
-    margin: 20px;
     display: flex;
-    max-width: auto;
     justify-content: space-between;
-  }
-
-  &__heading {
-    flex-direction: column;
-    margin: auto;
-    font-size: 50px;
-  }
-
-  &__grid {
-    display: flex;
-  }
-
-  &__profile {
-    width: 25vw;
-    height: 40vh;
-  }
-
-  &__images {
-    position: relative;
-    top: 100px;
-    right: 100px;
-  }
-
-  &__pokeball {
-    position: relative;
-    width: 13vw;
-    height: 13vw;
-    top: 10px;
-    left: 100px;
+    color: #fff;
   }
 
   &__pokeImg {
-    position: absolute;
-    width: 13vh;
-    height: 13vh;
-    top: 80px;
-    right: 100px;
-  }
-  &__description {
-    margin: auto;
-    width: 50vw;
-    height: 20vh;
+    max-height: 150px;
+    margin: 30px auto;
+    display: inline-block;
   }
 
   &__cross {
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  &__types {
+    margin: 10px 10px;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+  }
+
+  &__info {
+    margin: 10px 10px;
   }
 }
