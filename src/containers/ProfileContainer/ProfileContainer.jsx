@@ -2,7 +2,7 @@ import Profile from "../../components/Profile/Profile";
 import NavBarContainer from "../NavBarContainer/NavBarContainer";
 import HeadingContainer from "../HeadingContainer/HeadingContainer";
 import { useState, useEffect } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./ProfileContainer.scss";
 
@@ -28,8 +28,8 @@ const ProfileContainer = ({ handleTeam, userName, userImage, userInfo, teamName 
   const getUserById = async (id) => {
     const response = await fetch(`http://localhost:8080/team/${id}`);
     const userData = await response.json();
-    setTrainerInfo(userData)
-  }
+    setTrainerInfo(userData);
+  };
 
   const handleDelete = async (event) => {
     const id = event.target.value;
@@ -52,14 +52,14 @@ const ProfileContainer = ({ handleTeam, userName, userImage, userInfo, teamName 
   useEffect(() => {
     getPokemon();
     getUser();
-    getUserById(trainerId)
+    getUserById(trainerId);
   }, [trainerId]);
- 
+
   const userOptions = users.map((user) => {
     return <option value={user.id}>{user.trainer_name}</option>;
   });
 
-  const handleSelectedTrainer = event => setTrainerId(event.target.value)
+  const handleSelectedTrainer = (event) => setTrainerId(event.target.value);
 
   const pokeTrainer = pokemon.filter((pokemon) => pokemon.team == "trainer");
 
@@ -73,18 +73,20 @@ const ProfileContainer = ({ handleTeam, userName, userImage, userInfo, teamName 
         <div className="profileContainer__nav">
           <NavBarContainer />
         </div>
-        <Profile
-          userName={userName}
-          userImage={userImage}
-          userInfo={userInfo}
-          teamName={teamName}
-          onChange={handleSelectedTrainer}
-          pokeTeam={pokeTeam}
-          handleTeam={handleTeam}
-          trainerInfo={trainerInfo}
-          userOptions={userOptions}
-          handleDelete={handleDelete}
-        />
+        <div className="profileContainer__profile">
+          <Profile
+            userName={userName}
+            userImage={userImage}
+            userInfo={userInfo}
+            teamName={teamName}
+            onChange={handleSelectedTrainer}
+            pokeTeam={pokeTeam}
+            handleTeam={handleTeam}
+            trainerInfo={trainerInfo}
+            userOptions={userOptions}
+            handleDelete={handleDelete}
+          />
+        </div>
       </div>
     </div>
   );
