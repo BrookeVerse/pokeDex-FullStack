@@ -8,31 +8,31 @@ const pokeInfoCardCard = ({ pokemons, updatePokemon, removePokemon }) => {
         <div className="pokeInfoCard__header">
           <h2 className="pokeCard__heading" name="title">
             {pokemons.name} #{pokemons.id}
+            <hr></hr>
           </h2>
-          <Link to={"/"}>
+          <Link to={"/pokedex"}>
             <img src={blackCross} alt="Esc Button" className="pokeInfoCard__cross" />
           </Link>
         </div>
-        <p className="pokeInfoCard__types">
-          {pokemons.height} {pokemons.weight}
-        </p>
+        <p className="pokeInfoCard__types">{pokemons.height}</p>
+        <p className="pokeInfoCard__types">{pokemons.weight}</p>
         <div className="pokeInfoCard__images">
           <img src={pokemons.hires} alt="" className="pokeInfoCard__pokeImg" />
         </div>
         <div className="pokeInfoCard__description">
-          <hr></hr>
           <p className="pokeCard__content" name="description">
             <div className="pokeInfoCard__types">{pokemons.type}</div>
+            <hr></hr>
           </p>
           <p className="pokeInfoCard__info">{pokemons.description}</p>
-          <div>
-            <button onClick={updatePokemon} value={pokemons.id}>
-              Add To Team
-            </button>
-            <button onClick={removePokemon} value={pokemons.id}>
-              Remove From Team
-            </button>
-          </div>
+        </div>
+        <div className="pokeInfoCard__buttons">
+          <button onClick={updatePokemon} value={pokemons.id}>
+            Add To Team
+          </button>
+          <button onClick={removePokemon} value={pokemons.id}>
+            Remove From Team
+          </button>
         </div>
       </div>
     </div>

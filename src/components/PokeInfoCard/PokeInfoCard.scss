@@ -3,17 +3,24 @@
 .pokeInfoCard {
   &__container {
     display: inline-block;
-    margin: 20px 10px;
-    max-width: 400px;
+    margin: 150px auto;
+    max-width: 350px;
     padding: 1em;
     border-radius: 15px;
     text-align: left;
     box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6), 3px 3px 3px 0 rgba(#f759e4, 0.6), 0 0 6px 2px rgba(#ffe759, 0.6),
       0 35px 25px -15px rgba(0, 0, 0, 0.5);
-    background-color: darkgray;
+    background-color: #505050;
     background-blend-mode: color-dodge;
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+    transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
+    transition: 0.5s ease-in-out;
   }
+
+  &__container:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -33,7 +40,10 @@
   &__description {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
     color: #fff;
+    border: 1px solid #fff;
+    background-color: #6d6c6c;
   }
   &__types {
     margin: 10px 10px;
@@ -45,5 +55,10 @@
 
   &__info {
     margin: 10px 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: right;
   }
 }
