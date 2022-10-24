@@ -1,26 +1,28 @@
 @use "../../assets/styles/variables" as *;
 
 .navBar {
-  height: 100%;
-  border: 2px solid black;
+  height: 102%;
+  background-color: #363636;
 
-  &__container {
+ 
+  
+  &__linkList{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 70vh;
-    margin: auto;
   }
-
+  
   &__link {
+    margin-top: 20px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin: 50px 0px;
     list-style: none;
-    background-color: aquamarine;
+    text-decoration: none;
   }
-}
 
-.link {
-  text-decoration: none;
+  &__link:hover{
+    background-color: #646464;
+    transition: 0.7s ease-in-out;
+  }
 }

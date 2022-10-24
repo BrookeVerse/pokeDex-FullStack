@@ -1,35 +1,12 @@
 @use "../../assets/styles/variables" as *;
 
-.nav-bar-item {
-    display: flex;
-    height: min-content;
-    align-items: center;
-    &__image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 7px;
-      svg {
-        height: 16px;
-        width: 16px;
-      }
-      path {
-        stroke: grey;
-      }
-    }
-    &__text {
-      padding: 5px;
-      color: grey;
-    }
+.navBarItem {
+  height: 5vh;
+  &__link {
+    text-decoration: none;
   }
-  
-  .selected {
-    border-left: 3px solid green;
-    background-color: rgba(grey, 0.2);
-    > * {
-      color: navy;
-    }
-    path {
-      stroke: blue;
-    }
+  &__text{
+    color: #fff;
+    margin: auto 20px;
   }
+}
