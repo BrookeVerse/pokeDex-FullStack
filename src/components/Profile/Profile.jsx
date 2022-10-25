@@ -10,20 +10,22 @@ const Profile = ({ userName, onChange, userImage, handleDelete, userInfo, teamNa
         <div className="profile__content">
           <hr></hr>
           <select name="teams" id="teams" onChange={onChange} className="profile__select">
-            <option value={""} className="profile__option">Pick Trainer</option>
+            <option value={""}>Pick Trainer</option>
             {userOptions}
           </select>
           <div className="profile__team">
             <label htmlFor="pokeTeam" className="profileHeader__teamName">
               {teamName}
             </label>
-            <h2>{trainerInfo.trainer_name}</h2>
-            <p>{trainerInfo.game_info}</p>
-            <p>{trainerInfo.description}</p>
-            <div>{pokeTeam}</div>
-            <button value={trainerInfo.id} onClick={handleDelete}>
-              Delete Team
-            </button>
+            <div className="profile__trainerInfo">
+              <h2 className="profile__trainerName">{trainerInfo.trainer_name}</h2>
+              <p className="profile__trainerGame">{trainerInfo.game_info}</p>
+              <p className="profile__trainerNotes">{trainerInfo.description}</p>
+              <div className="profile__team">{pokeTeam}</div>
+              <button value={trainerInfo.id} onClick={handleDelete}>
+                Delete Trainer
+              </button>
+            </div>
           </div>
         </div>
       </div>

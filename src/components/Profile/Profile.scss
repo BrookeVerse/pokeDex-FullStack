@@ -34,7 +34,7 @@
     box-shadow: 0px 5px 50px 0px rgb(108, 68, 252), 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
   }
   &__userInfo {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   &__team {
     margin: 20px;
@@ -47,8 +47,21 @@
     width: 10vw;
     height: 3vh;
   }
- 
+
   &__select:hover {
     background-color: #907be0;
   }
+
+  
+  &__trainerName {
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+  &__trainerInfo{
+    background-color: #907be0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
 }
