@@ -15,7 +15,7 @@
   &__heading {
     font-weight: 700;
     font-size: 24px;
-    color: #6944ff;
+    color: #A6272C;
     margin-bottom: 15px;
     letter-spacing: 3px;
     font-weight: 400;
@@ -31,37 +31,35 @@
     overflow: hidden;
     position: relative;
     z-index: 4;
-    box-shadow: 0px 5px 50px 0px rgb(108, 68, 252), 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+    box-shadow: 0px 5px 50px 0px rgb(228, 34, 40), 0px 0px 0px 7px rgb(166, 39, 44);
   }
   &__userInfo {
     margin-bottom: 10px;
   }
   &__team {
-    margin: 20px;
+    margin: 0 20px;
   }
   &__select {
     margin: 5px;
-    background-color: #6944ff;
+    background-color: #A6272C;
     border-radius: 5px;
     color: #fff;
     width: 10vw;
     height: 3vh;
   }
-
+ 
   &__select:hover {
-    background-color: #907be0;
+    background-color: #E42228;
   }
 
-  
   &__trainerName {
-    color: #fff;
     letter-spacing: 3px;
     font-weight: 400;
   }
-  &__trainerInfo{
-    background-color: #907be0;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+  &__trainerInfo {
+    background-color: #A6272C;
+    color: #fff;
+    border-radius: 10px;
   }
-  
+
 }
