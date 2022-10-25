@@ -45,7 +45,7 @@
   &:hover,
   &:focus {
     &::before {
-      animation: shine 1.6s;
+      animation: shine 1.6s infinite;
     }
   }
 

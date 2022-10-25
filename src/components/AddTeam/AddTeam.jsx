@@ -1,14 +1,13 @@
 import "./AddTeam.scss";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const AddTeam = ({ handleSubmit, defaultFormState}) => {
- const [trainer, setTrainer] = useState(defaultFormState);
+const AddTeam = ({ handleSubmit, defaultFormState }) => {
+  const [trainer, setTrainer] = useState(defaultFormState);
 
-  const handleValidation = event => {
+  const handleValidation = (event) => {
     event.preventDefault();
 
-    if (Object.values(trainer).some(value => !value)) {
+    if (Object.values(trainer).some((value) => !value)) {
       alert("Missing content, unable to proceed");
       return;
     }
@@ -17,35 +16,46 @@ const AddTeam = ({ handleSubmit, defaultFormState}) => {
   };
   return (
     <div className="addTeam">
-      <h2>Create Profile Page</h2>
-      <div className="addTeam__name">
-        <label htmlFor="Name" className="addTeam__nameLabel">
-          Team Name?
-        </label>
-        <input type="text" placeholder="Enter Team Name..." name="Name" className="addTeam__nameInput" />
-      </div>
-
-      <h2>FORM</h2>
+      <h2 className="addTeam__heading">Create A Trainer</h2>
+      <p className="addTeam__instruction">You can create a trainer here, and set what game that trainer that game is in.</p>
       <form onSubmit={handleValidation}>
         <div className="addTeam__pokeTeam">
-          <label htmlFor="Team" className="addTeam__pokeLabel">
-            Enter Your NAME
-          </label>
-          <input type="text" placeholder="Whats your name?" name="pokemon_id" className="addTeam__pokeIdInput" value={trainer.trainer_name} onInput={event => setTrainer({...trainer, trainer_name: event.target.value})}/>
-          <label htmlFor="Name" className="addTeam__nameLabel">
-            Describe yourself?
-          </label>
-          <input type="text" placeholder="Tell us about yourself" name="Name" className="addTeam__nameInput" value={trainer.game_info} onInput={event => setTrainer({...trainer, game_info: event.target.value})}/>
-          <label htmlFor="Name" className="addTeam__nameLabel">
-            Password! shhhh
-          </label>
-          <input type="text" placeholder="password here..." name="Name" className="addTeam__nameInput" value={trainer.description} onInput={event => setTrainer({...trainer, description: event.target.value})}/>
+          <div className="addTeam__inputFocus">
+            <input
+              type="text"
+              placeholder="Trainer Name..."
+              name="pokemon_id"
+              className="addTeam__input"
+              value={trainer.trainer_name}
+              onInput={(event) => setTrainer({ ...trainer, trainer_name: event.target.value })}
+            />
+            <span className="focus-border"></span>
+          </div>
+          <div className="addTeam__inputFocus">
+            <input
+              type="text"
+              placeholder="Pokemon Game..."
+              name="Name"
+              className="addTeam__input"
+              value={trainer.game_info}
+              onInput={(event) => setTrainer({ ...trainer, game_info: event.target.value })}
+            />
+            <span className="focus-border"></span>
+          </div>
+          <div className="addTeam__inputFocus">
+            <input
+              type="text"
+              placeholder="Notes..."
+              name="Name"
+              className="addTeam__input"
+              value={trainer.description}
+              onInput={(event) => setTrainer({ ...trainer, description: event.target.value })}
+            />
+            <span className="focus-border"></span>
+          </div>
         </div>
         <button>Submit</button>
       </form>
-      <Link to={"/profile/"}>
-        <button>Back</button>
-      </Link>
     </div>
   );
 };

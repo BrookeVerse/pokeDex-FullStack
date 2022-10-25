@@ -27,7 +27,7 @@ const NavBarContainer = () => {
           </li>
           <li className="navBar__link">
             <RiTeamFill />
-            <NavBarItem text="Team" link="/addTeam/" />
+            <NavBarItem text="Trainer" link="/addTeam/" />
           </li>
         </ul>
       </div>

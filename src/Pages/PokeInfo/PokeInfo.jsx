@@ -21,7 +21,7 @@ const PokeInfo = ({ pokeArr }) => {
       body: JSON.stringify(chosenPokemon.innerHTML),
     });
     setPokemon(chosenPokemon);
-    navigate("/");
+    navigate("/pokedex");
     window.location.reload(true);
   };
 
@@ -35,7 +35,7 @@ const PokeInfo = ({ pokeArr }) => {
       body: JSON.stringify(chosenPokemon.innerHTML),
     });
     setPokemon(chosenPokemon);
-    navigate("/");
+    navigate("/pokedex");
     window.location.reload(true);
   };
 
