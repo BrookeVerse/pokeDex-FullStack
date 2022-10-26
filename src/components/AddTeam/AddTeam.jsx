@@ -54,7 +54,7 @@ const AddTeam = ({ handleSubmit, defaultFormState }) => {
             <span className="focus-border"></span>
           </div>
         </div>
-        <button>Submit</button>
+        <button className="addTeam__submit">Submit</button>
       </form>
     </div>
   );

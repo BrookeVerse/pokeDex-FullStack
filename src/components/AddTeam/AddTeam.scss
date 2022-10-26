@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 
 .addTeam {
-  margin: 100px auto;
+  margin: 90px auto;
   border: 5px solid #a6272c;
   border-radius: 10px;
   max-width: 500px;
@@ -90,5 +90,24 @@
     width: 15vw;
     box-sizing: border-box;
     letter-spacing: 1px;
+  }
+
+  &__submit {
+    width: fit-content;
+    text-align: center;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    &:active {
+      opacity: 0.8;
+    }
+    border-radius: 8px;
+    background-color: #a6272c;
+    color: #fff;
+    height: 39px;
+    padding: 11px 20px;
+    margin: 0;
+    font-size: 12px;
+    margin-left: 7px;
   }
 }

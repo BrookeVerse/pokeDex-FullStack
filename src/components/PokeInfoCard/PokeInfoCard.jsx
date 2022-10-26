@@ -27,10 +27,10 @@ const pokeInfoCardCard = ({ pokemons, updatePokemon, removePokemon }) => {
           <p className="pokeInfoCard__info">{pokemons.description}</p>
         </div>
         <div className="pokeInfoCard__buttons">
-          <button onClick={updatePokemon} value={pokemons.id}>
+          <button className="pokeInfoCard__add" onClick={updatePokemon} value={pokemons.id}>
             Add To Team
           </button>
-          <button onClick={removePokemon} value={pokemons.id}>
+          <button className="pokeInfoCard__delete" onClick={removePokemon} value={pokemons.id}>
             Remove From Team
           </button>
         </div>
