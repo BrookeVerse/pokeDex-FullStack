@@ -15,7 +15,7 @@
   &__heading {
     font-weight: 700;
     font-size: 24px;
-    color: #A6272C;
+    color: #a6272c;
     margin-bottom: 15px;
     letter-spacing: 3px;
     font-weight: 400;
@@ -41,15 +41,15 @@
   }
   &__select {
     margin: 5px;
-    background-color: #A6272C;
+    background-color: #a6272c;
     border-radius: 5px;
     color: #fff;
     width: 10vw;
     height: 3vh;
   }
- 
+
   &__select:hover {
-    background-color: #E42228;
+    background-color: #e42228;
   }
 
   &__trainerName {
@@ -57,9 +57,26 @@
     font-weight: 400;
   }
   &__trainerInfo {
-    background-color: #A6272C;
+    background-color: #a6272c;
     color: #fff;
     border-radius: 10px;
   }
 
+  &__button {
+    width: fit-content;
+    text-align: center;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    &:active {
+      opacity: 0.8;
+    }
+    background-color: #505050;
+    color: #fff;
+    height: 22px;
+    padding: 8px 8px;
+    margin: 0;
+    font-size: 9px;
+    border-radius: 5px;
+  }
 }

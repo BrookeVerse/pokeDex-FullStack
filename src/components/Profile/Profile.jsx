@@ -22,7 +22,7 @@ const Profile = ({ userName, onChange, userImage, handleDelete, userInfo, teamNa
               <p className="profile__trainerNotes">{trainerInfo.game_info}</p>
               <p className="profile__trainerNotes">{trainerInfo.description}</p>
               <div className="profile__team">{pokeTeam}</div>
-              <button value={trainerInfo.id} onClick={handleDelete}>
+              <button className="profile__button" value={trainerInfo.id} onClick={handleDelete}>
                 Delete Trainer
               </button>
             </div>

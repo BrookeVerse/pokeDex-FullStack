@@ -1,12 +1,11 @@
-import "./Button.scss"
+import "./Button.scss";
 
-const Button = ({style, onClick, imgStyle, children, textStyle, buttonText}) => {
+const Button = ({ style, onClick, textStyle, buttonText, value }) => {
   return (
-    <button className={style} onClick={onClick}>
-        <div className={imgStyle}>{children}</div>
-        <p className={textStyle}>{buttonText}</p>
+    <button value={value} className={style} onClick={onClick}>
+      <p className={textStyle}>{buttonText}</p>
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

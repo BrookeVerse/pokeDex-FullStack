@@ -42,7 +42,7 @@ const ProfileContainer = ({ handleTeam, userName, userImage, userInfo, teamName 
 
     if (result.ok) {
       alert("Trainer deleted");
-      navigate("/");
+      navigate("/pokedex");
     } else {
       const message = await result.text();
       alert(message);
