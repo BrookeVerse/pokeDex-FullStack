@@ -1,0 +1,68 @@
+@use "../../assets/styles/variables" as *;
+
+.button {
+  width: fit-content;
+  text-align: center;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.round-border {
+  border-radius: 40px;
+}
+
+.square-border {
+  border-radius: 4px;
+}
+
+.rounded-square-border {
+  border-radius: 8px;
+}
+
+.darkRed {
+  background-color: #a6272c;
+  color: #505050;
+}
+
+.red {
+  background-color: #e42228;
+  color: #fff;
+}
+
+.grey {
+  background-color: #505050;
+  color: #fff;
+}
+
+.small {
+  height: 22px;
+  padding: 8px 8px;
+}
+
+.small-text {
+  margin: 0;
+  font-size: 9px;
+}
+
+.medium {
+  height: 39px;
+  padding: 11px 20px;
+}
+
+.medium-text {
+  margin: 0;
+  font-size: 12px;
+  margin-left: 7px;
+}
+
+.modal {
+  height: 44px;
+  padding: 10px;
+  width: 170px;
+}

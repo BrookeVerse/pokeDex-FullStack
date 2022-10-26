@@ -23,7 +23,7 @@ const HomeContainer = () => {
         </div>
       </div>
       <footer className="homeContainer__footer">
-        <p>Developer By Brooke Waldorf-Wells</p>
+        <p>Developed By Brooke Waldorf-Wells</p>
       </footer>
     </div>
   );
