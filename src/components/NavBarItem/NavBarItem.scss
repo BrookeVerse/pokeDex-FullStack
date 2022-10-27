@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 
 .navBarItem {
-  height: 5vh;
+  margin: 10px;
   &__link {
     text-decoration: none;
   }

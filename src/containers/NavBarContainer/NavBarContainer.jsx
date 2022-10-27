@@ -14,19 +14,27 @@ const NavBarContainer = () => {
         </div>
         <ul className="navBar__linkList">
           <li className="navBar__link">
-            <FcHome />
+            <div className="navBar__image">
+              <FcHome />
+            </div>
             <NavBarItem text="Home" link="/" />
           </li>
           <li className="navBar__link">
-            <AiOutlineUsergroupDelete />
+            <div className="navBar__image">
+              <AiOutlineUsergroupDelete />
+            </div>
             <NavBarItem text="Profile" link="/profile/" />
           </li>
           <li className="navBar__link">
-            <TbPokeball />
+            <div className="navBar__image">
+              <TbPokeball />
+            </div>
             <NavBarItem text="PokeDex" link="/pokedex/" />
           </li>
           <li className="navBar__link">
-            <RiTeamFill />
+            <div className="navBar__image">
+              <RiTeamFill />
+            </div>
             <NavBarItem text="Trainer" link="/addTeam/" />
           </li>
         </ul>
