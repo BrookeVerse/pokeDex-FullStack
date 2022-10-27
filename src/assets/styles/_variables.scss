@@ -1,5 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Megrim&family=Nabla&family=Nokora&family=Press+Start+2P&family=Quando&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sumana&display=swap');
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//Fonts
+$titleOne-font-family: 'Luckiest Guy', cursive;
+$primary-font-family: 'Quando', serif;
+$secondary-font-family: 'Sumana', serif;
+
+//main colours
+$primary-color: #a6272c;
+$secondary-color: #fff;
+$tertiaryColour: #505050;
+
+//accent colours
+$primary-accent-color: #e42228;
+$secondary-accent-color: #313131;
+
+//card colours
+$primary-card-color: #6d6c6c;
+$secondary-card-color: #272727;
+$tertiary-card-color: #232323;

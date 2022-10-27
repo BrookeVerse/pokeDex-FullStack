@@ -1,68 +1,67 @@
 @use "../../assets/styles/variables" as *;
 
 .home {
-    &__header {
-        display: flex;
-        flex-direction: row;
-    }
+  &__header {
+    display: flex;
+    flex-direction: row;
+  }
 
-    &__heading {
-        color: white;
-        margin: auto 0;
-        font-size: 40px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-shadow: 2px 4px 6px  #fff;
-    }
-    &__logo{
-        width: 15vw;
-    }
-    &__content {
-        display: flex;
-    }
-    &__text{
-        background: #232323;
-        border-radius: 20px;
+  &__heading {
+    color: $secondary-color;
+    margin: auto 0;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: $titleOne-font-family;
+  }
+  &__logo {
+    width: 15vw;
+  }
+  &__content {
+    display: flex;
+  }
+  &__text {
+    background: $secondary-accent-color;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto 100px;
+    width: 25vw;
+    line-height: 25px;
+    font-family: $secondary-font-family;
+  }
+  &__intro {
+    color: $secondary-color;
+  }
+  &__list {
+    list-style: none;
+    margin-top: 20px;
+    color: $secondary-color;
+  }
+  &__buttonText {
+    margin-top: 10px;
+    color: $secondary-color;
+  }
+
+  &__button {
+    color: $secondary-color;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  &__button:hover {
+    transform: translateX(10px);
+  }
+
+  @media screen and (max-width: 390px) {
+    .home {
+      &__heading {
+        font-size: 30px;
+      }
+      &__text {
+        margin: 80px 60px;
         padding: 20px;
-        margin: auto 100px;
-        width: 25vw;
-    }
-    &__intro{
-        color: white;
-    }
-    &__list{
-        list-style: none;
-        margin-top: 20px;
-        color: white;
-    }
-    &__buttonText{
-        margin-top: 10px;
-        color: #fff;
+        width: 80vw;
+        height: 50vh;
       }
-
-    &__button {
-        color: #fff;
-        text-decoration: none;
-        transition: 0.5s;
     }
-
-    &__button:hover {
-        transform:translateX(10px);
-    }
-
-    @media screen and (max-width: 390px) {
-        .home{
-            &__heading {
-                font-size: 30px;
-            }
-          &__text{
-            margin: 80px 60px;
-            padding: 20px;
-            width: 80vw;
-            height: 50vh;
-          }
-        }
-      }
-   
+  }
 }
-

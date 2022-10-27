@@ -2,7 +2,7 @@
 
 .navBar {
   height: 102%;
-  background-color: #363636;
+  background-color: $secondary-accent-color;
 
   &__linkList{
     margin-top: 30px;
@@ -20,7 +20,7 @@
   }
 
   &__link:hover{
-    background-color: #646464;
+    background-color: $tertiaryColour;
     transition: 0.7s ease-in-out;
   }
 }

@@ -1,6 +1,7 @@
 import "./AddTeam.scss";
 import { useState } from "react";
 
+
 const AddTeam = ({ handleSubmit, defaultFormState }) => {
   const [trainer, setTrainer] = useState(defaultFormState);
 

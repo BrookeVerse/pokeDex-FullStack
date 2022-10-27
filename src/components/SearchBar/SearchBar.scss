@@ -1,10 +1,10 @@
 @use "../../assets/styles/variables" as *;
 
 .searchBar {
-  background: #fff;
+  background: $secondary-color;
   height: 30px;
   border-radius: 30px;
-  color: #505050;
+  color: $tertiaryColour;
   padding: 10px 20px;
   display: flex;
   justify-content: center;

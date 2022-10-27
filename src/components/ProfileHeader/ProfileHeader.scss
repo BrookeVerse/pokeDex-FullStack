@@ -11,9 +11,9 @@
 }
 .profileHeader {
   display: flex;
-  background-color: #fff;
+  background-color: $secondary-color;
   border-radius: 10px;
-  border: 1px solid grey;
+  border: 1px solid $tertiaryColour;
   box-shadow: 7px 7px 10px rgba(#000, 0.8);
   margin: 10px;
   padding: 10px;

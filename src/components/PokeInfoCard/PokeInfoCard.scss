@@ -10,7 +10,7 @@
     text-align: left;
     box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6), 3px 3px 3px 0 rgba(#f759e4, 0.6), 0 0 6px 2px rgba(#ffe759, 0.6),
       0 35px 25px -15px rgba(0, 0, 0, 0.5);
-    background-color: #505050;
+    background-color: $tertiaryColour;
     background-blend-mode: color-dodge;
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
     transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
@@ -24,7 +24,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    color: #fff;
+    color: $secondary-color;
   }
 
   &__pokeImg {
@@ -41,16 +41,16 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    color: #fff;
-    border: 1px solid #fff;
-    background-color: #6d6c6c;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    background-color: $primary-card-color;
   }
   &__types {
     margin: 10px 10px;
     text-align: center;
     font-size: 16px;
     display: inline-block;
-    color: #fff;
+    color: $secondary-color;
   }
 
   &__info {
@@ -73,15 +73,16 @@
     &:active {
       opacity: 0.8;
     }
-    background-color: #a6272c;
-    color: #505050;
+    background-color: $tertiaryColour;
     border-radius: 8px;
     margin: 0;
     font-size: 12px;
     margin-left: 7px;
     height: 39px;
     padding: 11px 20px;
-    color: #fff;
+    color: $secondary-color;
+    box-shadow: -3px -3px 3px 0 rgba(#26e6f7, 0.6), 3px 3px 3px 0 rgba(#ffe759, 0.6), 0 0 6px 2px rgba(#f759e4, 0.6),
+      0 35px 25px -15px rgba(0, 0, 0, 0.5);
   }
 
   &__delete {
@@ -95,13 +96,15 @@
     &:active {
       opacity: 0.8;
     }
-    background-color: #fff;
-    color: #e42228;
+    background-color: $secondary-card-color;
+    color: $secondary-color;
     border-radius: 8px;
     margin: 0;
     font-size: 12px;
     margin-left: 7px;
     height: 39px;
     padding: 11px 20px;
+    box-shadow: -3px -3px 3px 0 rgba(#f759e4, 0.6), 3px 3px 3px 0 rgba(#ffe759, 0.6), 0 0 6px 2px rgba(#26e6f7, 0.6),
+      0 35px 25px -15px rgba(0, 0, 0, 0.5);
   }
 }

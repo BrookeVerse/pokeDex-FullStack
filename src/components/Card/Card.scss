@@ -11,10 +11,10 @@
   max-height: 10vh;
   max-width: 10vw;
   margin: 20px;
-  border: 1px solid grey;
+  border: 1px solid $tertiaryColour;
   box-shadow: 0 5px 10px rgba(#000, 0.8);
   border-radius: 6px;
-  background-color: #fff;
+  background-color: $secondary-color;
   align-items: center;
   text-align: center;
 
@@ -30,7 +30,7 @@
   overflow: hidden;
 
   &::before {
-    background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
+    background: linear-gradient(to right, fade_out($secondary-color, 1) 0%, fade_out($secondary-color, 0.7) 100%);
     content: "";
     display: block;
     height: 100%;

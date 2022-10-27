@@ -6,7 +6,8 @@
     text-decoration: none;
   }
   &__text{
-    color: #fff;
+    color: $secondary-color;
+    font-family: $primary-font-family;
     margin: auto 20px;
   }
 }

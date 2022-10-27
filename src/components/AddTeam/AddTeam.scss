@@ -2,20 +2,20 @@
 
 .addTeam {
   margin: 90px auto;
-  border: 5px solid #a6272c;
+  border: 5px solid $primary-color;
   border-radius: 10px;
   max-width: 500px;
-  background-color: #fff;
+  background-color: $secondary-color;
   box-shadow: 12px 10px 13px rgba(#202020, 0.7);
 
   &__heading {
-    color: #505050;
+    color: $tertiaryColour;
     font-weight: 400;
     letter-spacing: 5px;
   }
 
   &__instruction {
-    color: #505050;
+    color: $tertiaryColour;
     margin: 20px;
     text-align: left;
   }
@@ -48,9 +48,9 @@
     border: 0;
     padding: 5px 0 7px;
     border: 1px solid transparent;
-    border-bottom-color: #a6272c;
+    border-bottom-color: $primary-color;
     transition: 0.4s;
-    background-color: #fff;
+    background-color: $secondary-color;
   }
 
   &__input:focus {
@@ -73,7 +73,7 @@
   &__input:focus ~ .focus-border {
     transition: 0.4s;
     height: 36px;
-    border: 2px solid #a6272c;
+    border: 2px solid $primary-color;
     z-index: 1;
   }
 
@@ -85,8 +85,8 @@
   }
 
   &__input[type="text"] {
-    font: 15px/24px "Lato", Arial, sans-serif;
-    color: #505050;
+    font: 15px/24px;
+    color: $tertiaryColour;
     width: 15vw;
     box-sizing: border-box;
     letter-spacing: 1px;
@@ -102,8 +102,8 @@
       opacity: 0.8;
     }
     border-radius: 8px;
-    background-color: #a6272c;
-    color: #fff;
+    background-color: $primary-color;
+    color: $secondary-color;
     height: 39px;
     padding: 11px 20px;
     margin: 0;

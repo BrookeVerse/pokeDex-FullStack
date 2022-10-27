@@ -26,18 +26,18 @@
 }
 
 .darkRed {
-  background-color: #a6272c;
-  color: #505050;
+  background-color: $primary-color;
+  color: $tertiaryColour;
 }
 
 .red {
-  background-color: #e42228;
-  color: #fff;
+  background-color: $primary-accent-color;
+  color: $secondary-color;
 }
 
 .grey {
-  background-color: #505050;
-  color: #fff;
+  background-color: $tertiaryColour;
+  color: $secondary-color;
 }
 
 .small {
