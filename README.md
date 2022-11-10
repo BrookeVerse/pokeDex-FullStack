@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=500px height=auto src="./src/assets/Images/pokemon.JPG" alt="Project logo"></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">PikeDex</h3>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="center"> This was built as a full stack project using React, JavaScript, SpringBoot, Java and MySQL. Showing my ability to create a database an API that will be used by this user interface. 
+    <br> 
+</p>
 
-### `npm test`
+## 📝 Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [TODO](../TODO.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-### `npm run build`
+## 🧐 About <a name = "about"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+During my course with \_nology we learned how to use JavaScript, React, Java, Spring Boot and MySql. This final project was to show our ability to use all these skills. This repo shows the frontend, how the user can interact with the API and DB that was created.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+PikaDex shows all the data being held by the DB, displaying each pokemon, where you can click on the image to get more information. You can also create a trainer, and store data within the database. Using the entire CRUD system of an API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-### `npm run eject`
+To use this repo, you need to clone it down and use npm start in the terminal. This is still an on-going project so it isn't hosted on my GitHub Pages yet.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this repo you need to npm install in the terminal or when you cd into the file on GitBash.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔧 Running the tests <a name = "tests"></a>
 
-## Learn More
+Jest is being used to do unit testing on this project, more tests need to be done as well as end to end testing. This will be downloaded when you have used npm install.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+it("Selected NavBarItem has additional className", () => {
+  const { container } = customRender(
+    <NavBarItem imageSrc="" text="Dashboard" link="" selected="Dashboard" />
+  );
+  expect(container).toMatchSnapshot();
+});
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+it("Should render an image on the profile header", async () => {
+    render(<ProfileHeader />)
 
-### Code Splitting
+    const profileImage = screen.getByRole("img");
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    expect(profileImage).toBeInTheDocument();
+})
+```
 
-### Analyzing the Bundle Size
+## 🎈 Usage <a name="usage"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can use this repo to create websites that use a API to create cards that can give a user more information when they click on a card. The user can also create profiles for things that will be saved in a database.
 
-### Making a Progressive Web App
+## 🚀 Deployment <a name = "deployment"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This system will need to be deployed on a cloud or hosting site, as well as the API that it is using. 
 
-### Advanced Configuration
+## ⛏️ Built Using <a name = "built_using"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [React](https://reactjs.org/) - Web Framework
+- [JavaScript](https://www.javascript.com/) - Code Language
+- [PikaApi](*) - Api Database(Not hosted yet)
 
-### Deployment
+## ✍️ Authors <a name = "authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [@BrookeVerse](https://github.com/BrookeVerse) - Idea & Creation
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- _Nology coaches, who trained me on everything used in this project
